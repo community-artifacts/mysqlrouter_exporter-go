@@ -48,7 +48,7 @@ services:
     build:
       context: ./mysql-shell
       args:
-        MYSQL_SHELL_PACKAGER_URL: "https://dev.mysql.com/get/Downloads/MySQL-Shell/mysql-shell-8.1.0-1.el7.x86_64.rpm"
+        MYSQL_SHELL_PACKAGER_URL: "https://dev.mysql.com/get/Downloads/MySQL-Shell/mysql-shell-8.0.45-1.el7.x86_64.rpm"
       dockerfile: Dockerfile
     environment:
       MYSQL_USER: "root"
