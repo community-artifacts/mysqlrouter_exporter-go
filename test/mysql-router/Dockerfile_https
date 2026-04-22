@@ -3,6 +3,8 @@ FROM oraclelinux:7-slim
 ARG MYSQL_YUM_REPO_URL
 
 RUN yum install -y $MYSQL_YUM_REPO_URL \
+    && rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2023 \
+    && rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2025 \
     && yum install -y mysql-community-client mysql-router-community libpwquality \
     && yum clean all
 
